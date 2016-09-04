@@ -152,13 +152,15 @@ window.onload = (function() {
 		}
 		else{
 			var output = "<p> Cart is empty </p>"
-			$("cart-content").html(output);
+			$(".cart-content").html(output);
 		}
 	}
 
 
-	//load cart 
-	loadCart();
+	//load cart if its not empty it loads the current the strored data
+	if (loadCart() != null) {
+		loadCart();
+	}
 	var array  = listCart();
 	console.log(array);
 	displayCart();
