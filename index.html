@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalization.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">	
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>	
+		<!--script type="text/javascript" src="js/cookie.js"></script-->	
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/slide.js"></script>		
+		<title>MyGames.com|Home</title>
+
+		
+	</head>
+
+	<body>
+		<!--HEADER-->
+		<header class="header">	
+			<!--NAVEGATOR-->	
+			<div class="nav-main">
+				<div class="logo">
+					<a href="#"><b>MyGames</b>.com</a>				
+				</div>
+				<ul>
+					<li>
+						<a class="nav-item" href="#">PC Games</a>
+						<div class="nav-content">
+							<div class="nav-sub">
+								<ul>
+									<li><a href="#">Adventure</a></li>
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Sport</a></li>
+									<li><a href="#">Shooting</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="nav-item" href="#">Playstation</a>
+						<div class="nav-content">
+							<div class="nav-sub">
+								<ul>
+									<li><a href="#">Adventure</a></li>
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Sport</a></li>
+									<li><a href="#">Shooting</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="nav-item" href="#">Xbox</a>
+					</li>
+					<li>
+						<a class="nav-item" href="#">Pre-owned</a>
+					</li>
+					<li>
+						<a class="nav-item" href="#">	Find Us</a>
+					</li>
+					<li>
+						<a class="nav-item" href="#">FAQs</a>
+					</li>
+					<li>
+						<a class="nav-item fa fa-user" aria-hidden="true" href="#" title="My Accont"></a>
+					</li>
+					<li class="cart">
+						<a class="nav-item" href="#" title="My Cart"> 
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+							<span class="cart-count">Items <span class="cartTotal">0</span></span>							
+						</a>
+						<div class="cart-content">							
+							<table id="show-cart">	
+							</table>
+							<div> Due total: R<span id="total-cart"></span> </div>
+						</div>
+					</li>
+				</ul>	
+			</div>	
+			<!--END NAVEGATOR-->
+		</header>
+		<!--END HEADER-->
+
+		<!--CARROSSEL-->
+		<section class="slide" >
+			<img class="mySlides" src="img/img2.jpg" id="img">
+			<img class="mySlides" src="img/img1.jpg" id="img">
+			<img  class="mySlides" src="img/img3.jpg" id="img">			
+		</section>
+		<!--END CARROSSEL-->
+		<!--NEW PRODUCT-->
+		<section class="new-prod">
+			<div class="sub-desc">
+				<h3>New Products</h3>
+			</div>
+
+			<div class="prod-show">
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'" src="img/FarCry-Primal_PS4.jpg">
+					</div>
+					<div class="item-desc">
+						<p>Farcy Criminal (PS4)</p>
+					</div>
+					<a href="#">Price R<b class="price">550</b></a><br>
+					<a><span class="tile" data-name="Farcy Criminal" data-price="550">Add to Cart</span></a>
+				</div>	
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'"  src="img/CallOF.jpg">
+					</div>
+					<div class="item-desc">
+						<p>Call of Duty Infinite Warfare</p>
+					</div>
+					<a href="#">Price R<b class="price">400</b></a><br>
+					<a><span class="tile" data-name="Call of Duty Infinite Warfare" data-price="400">Add to Cart</span></a>
+				</div>	
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'"  src="img/JustPS41.jpg">
+					</div>
+					<div class="item-desc">
+						<p>Just Cause 3 (PS4)</p>
+					</div>
+					<a href="#">Price R<b class="price">400</b></a><br>
+					<a><span class="tile" data-name="Just Cause 3 (PS4)" data-price="400">Add to Cart</span></a>
+				</div>	
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'"  src="img/DOOM.jpg">
+					</div>
+					<div class="item-desc">
+						<p>DOOM</p>
+					</div>
+					<a href="#">Price R<b class="price">400</b></a><br>
+					<a><span class="tile" data-name="DOOM" data-price="400">Add to Cart</span></a>
+				</div>	
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'" src="img/Mirrors.jpg">
+					</div>
+					<div class="item-desc">
+						<p>Mirros Edge Catalyst</p>
+					</div>
+					<a href="#">Price R<b class="price">400</b></a><br>
+					<a><span class="tile" data-name="Mirros Edge Catalyst" data-price="400">Add to Cart</span></a>
+				</div>			
+			</div>
+		</section>
+		<!--END NEW PRODUCT-->
+
+		<!--TOP SELLERS-->
+		<section class="prod">
+			<div class="sub-desc">
+				<h3>top seller</h3>
+			</div>
+
+			<div class="prod-show">
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'" src="img/FarCry-Primal_PS4.jpg">
+					</div>
+					<div class="item-desc">
+						<p>Farcy Criminal (PS4)</p>
+					</div>
+					<a href="#">Price R<b class="price">550</b></a><br>
+					<a><span class="tile" data-name="Farcy Criminal" data-price="550">Add to Cart</span></a>
+				</div>	
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'"  src="img/CallOF.jpg">
+					</div>
+					<div class="item-desc">
+						<p>Call of Duty Infinite Warfare</p>
+					</div>
+					<a href="#">Price R<b class="price">400</b></a><br>
+					<a><span class="tile">Add to Cart</span></a>
+				</div>	
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'"  src="img/JustPS41.jpg">
+					</div>
+					<div class="item-desc">
+						<p>Just Cause 3 (PS4)</p>
+					</div>
+					<a href="#">Price R<b class="price">400</b></a><br>
+					<a><span class="tile">Add to Cart</span></a>
+				</div>	
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'"  src="img/DOOM.jpg">
+					</div>
+					<div class="item-desc">
+						<p>DOOM</p>
+					</div>
+					<a href="#">Price R<b class="price">400</b></a><br>
+					<a><span class="tile">Add to Cart</span></a>
+				</div>	
+				<div class="item">
+					<div class="item-img">
+						<img onmouseover="this.src='img/CallOF.jpg'" onmouseout="this.src='img/FarCry-Primal_PS4.jpg'" src="img/Mirrors.jpg">
+					</div>
+					<div class="item-desc">
+						<p>Mirros Edge Catalyst</p>
+					</div>
+					<a href="#">Price R<b class="price">400</b></a><br>
+					<a><span class="tile">Add to Cart</span></a>
+				</div>			
+			</div>
+		</section>
+		<!--END TOP SELLERS-->
+	</body>
+
+	
+	
+</html>
