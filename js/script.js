@@ -1,8 +1,9 @@
 window.onload = (function() {
 
 	
-	var cart = [];
-	var ItemsArr = function (name, price, qtd){
+	var cart = [];//define array to hold ITEM obj
+
+	var ItemsArr = function (name, price, qtd){ //setting up the obj
 		this.name = name;
 		this.price = price;
 		this.qtd = qtd;
@@ -10,30 +11,27 @@ window.onload = (function() {
 	
 	
 
-	//alert(localStorage.clickCount);
+	//click func to add items into the arr
 	$(".tile").click(function(event){
-		event.preventDefault();
-		//set the click counter to 1;	
-		//count++;
+		event.preventDefault(); //prevent a tag from it default behaivor
+
+		//get attribute values from html page
 		var itemName =  $(this).attr("data-name");	
-		var itemPrice = Number($(this).attr("data-price"));
-		//var itemQtd = 1;
+		var itemPrice = Number($(this).attr("data-price"));		
 
-		alert(itemPrice + itemName);	
-		//acount++;				
-		//$(".cart-count").html("Items " + Number(count));
-		//localStorage.count = count;
+		//alert(itemPrice + itemName);	
 
-		addItem(itemName, itemPrice, 1);
+		addItem(itemName, itemPrice, 1);//adding items to the arr of objs
 		
 		displayCart();
 	});
 
 
-	//Add item to cart
+	//Add item to cart method
 	function addItem(name,price,qtd) {
-		// body...
-		 for(var i in cart){
+		// parameters <nam,price,qtd>
+
+		 for(var i in cart){//statement to confirm if item is already listed...
 			if (cart[i].name===name) {
 
 			   cart[i].qtd++;
@@ -42,10 +40,10 @@ window.onload = (function() {
 			}
    		}
 
-	    var item = new ItemsArr(name,price,qtd);
+	    var item = new ItemsArr(name,price,qtd); //else item not listed add new item to cartArr
 	   	console.log(item.name + item.price + item.qtd);
 	    cart.push(item);
-	    saveCart();
+	    saveCart();//save arr to localStroge
 
 		console.log(cart);
 	}
@@ -63,7 +61,6 @@ window.onload = (function() {
 			}
 		}
 	}
-
 	function removeItemFromCartAll(name)
 	{
 	   for(var i in cart)
@@ -75,12 +72,15 @@ window.onload = (function() {
 	   }
 	   saveCart();
 	}
+
+
 	//clearCart()
 	function clearCart()
 	{
 	   cart = [];
 	   saveCart();
 	}
+
 	//totalCart()
 	function totalCart()
 	{
@@ -93,7 +93,7 @@ window.onload = (function() {
 	   return totalCost.toFixed(2);
 
 	}
-
+	//count number of listed items
 	function countCart() {
 		// body...
 		var count = 0;
@@ -102,7 +102,8 @@ window.onload = (function() {
 		}
 		return count;
 	}
-	//listCart() //return arr
+
+	//copy our list
 	function listCart()
 	{
 	   var cartCopy= [];
@@ -120,23 +121,25 @@ window.onload = (function() {
 
   		return cartCopy;
   	}
+
 	//saveCart()
 	function saveCart()
 	{
 		localStorage.setItem("ShoppingCart", JSON.stringify(cart));
 	}
+
 	//loadCart()
 	function loadCart()
 	{
 		cart = JSON.parse(localStorage.getItem("ShoppingCart"));
 	}
 
-
+	//display itemsArr method
 	function displayCart() {
 		// body...
 		var cartArr = listCart();
 
-		if (cartArr.length > 0) {
+		if (cartArr.length > 0) {//checking if there's any saved item 
 			var output = "<tr><td>Item</td><td>Price</td><td>Qtd</td></tr>";
 
 			for(var i in cartArr){
