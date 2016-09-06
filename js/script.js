@@ -138,13 +138,16 @@ window.onload = (function() {
 	function displayCart() {
 		// body...
 		var cartArr = listCart();
-
+		var totalItemPrice = 0;
 		if (cartArr.length > 0) {//checking if there's any saved item 
-			var output = "<tr><td>Item</td><td>Price</td><td>Qtd</td></tr>";
+			var output = "<tr><th>Description</th><th>Price</th><th></th><th>Quantity</th><th>Total Price</th><th></th></tr>";
 
 			for(var i in cartArr){
+				totalItemPrice = cartArr[i].price * cartArr[i].qtd;
 				output +="<tr>"
-				output += "<td>" + cartArr[i].name + "</td><td>" + cartArr[i].price + "</td><td>" + cartArr[i].qtd +"</td>"
+				output += "<td>" + cartArr[i].name + "</td><td>" + cartArr[i].price + "<td> x </td>" + "</td><td>" + cartArr[i].qtd +"</td>"
+				output += "<td>"+totalItemPrice+"</td><td><a><span>Remove Item</span></a></td>"
+				
 				output +="</tr>"
 			}
 
@@ -156,6 +159,7 @@ window.onload = (function() {
 		else{
 			var output = "<p> Cart is empty </p>"
 			$(".cart-content").html(output);
+			$(".cart-prev").html(output);
 		}
 	}
 
@@ -165,7 +169,7 @@ window.onload = (function() {
 		loadCart();
 	}
 	var array  = listCart();
-	console.log(array);
+	//console.log(array);
 	displayCart();
 
 });
